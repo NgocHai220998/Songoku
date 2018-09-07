@@ -1,0 +1,56 @@
+﻿  Boss.cpp
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Bullet.cpp
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Main.cpp
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(16): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\main.cpp(253): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\main.cpp(275): warning C4018: '<': signed/unsigned mismatch
+  MainObject.cpp
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(16): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Songoku.cpp
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\bullet.h(25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(16): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\monster.h(17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\mainobject.h(20): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(175): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(186): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(219): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(237): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(321): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(326): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(338): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(345): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(352): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(359): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(473): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(500): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(503): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(511): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(513): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(789): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(797): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(805): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(813): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(821): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(829): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(848): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(856): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(864): warning C4018: '<': signed/unsigned mismatch
+c:\users\acer\desktop\songokubeta\songoku\songoku\songoku.cpp(875): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Songoku.vcxproj -> C:\Users\ACER\Desktop\songokuBeta\Songoku\Debug\Songoku.exe
