@@ -7,7 +7,7 @@
 - [Token Endpoint](#token-endpoint)
 - [Token Revocation Endpoint](#token-revocation-endpoint)
 - [Token Introspection Endpoint](#token-introspection-endpoint)
-- [JWKs Endpoint](#jwks-endpointjwks)
+- [JWKs Endpoint](#jwks-endpoint)
 - [UserInfo Endpoint](#userinfo-endpoint)
 - [End Session Endpoint](#end-session-endpoint)
 
