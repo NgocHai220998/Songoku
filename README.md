@@ -142,43 +142,43 @@ client_secret|※|Please specify the Client Secret provided at the time of appli
 
 Parameter|Required?|Description
 ---|---|---
-access_token|○|Access token for accessing the API.
-token_type|○|Token Type. Provides the information necessary to properly use the Access Token when accessing the Web API (format: Bearer Token).
-expires_in|○|The number of seconds that represents the Access Token expiration period.
-refresh_token|○|Refresh Token. Used when updating the Access Token.
-scope|○|The scope of the provided access token.
-created_at|○|The date and time when the access token was created.
-id_token|○|ID Token. A signed token for tamper detection that contains user credentials.
+access_token|yes|Access token for accessing the API.
+token_type|yes|Token Type. Provides the information necessary to properly use the Access Token when accessing the Web API (format: Bearer Token).
+expires_in|yes|The number of seconds that represents the Access Token expiration period.
+refresh_token|yes|Refresh Token. Used when updating the Access Token.
+scope|yes|The scope of the provided access token.
+created_at|yes|The date and time when the access token was created.
+id_token|yes|ID Token. A signed token for tamper detection that contains user credentials.
 
 #### References
 
 - [OpenID Connect Core 1.0 - Token Endpoint](https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint)
 
-### Token Revocation Endpoint（トークン無効化エンドポイント）
+### Token Revocation Endpoint
 
 - URI: `/oauth/revoke`
 - HTTP Methods: `POST`
 
-#### リクエストヘッダ（アクセストークン新規取得時、更新時共通）
+#### Request headers（When Get New Access Token or Renew Access Token）
 
-このエンドポイントはBASIC認証を用いたクライアント認証を行う必要があります。
-Client IDとClient Secretをコロン（":"）で連結し、Base64エンコードした値をAuthorizationヘッダで送ってください。
+This endpoint should authenticate the client using BASIC authentication.
+Concatenate the Client ID and Client Secret with a colon (":") and send the Base64-encoded value in the Authorization header.
 
-#### リクエストパラメータ
+#### Parameters
 
-パラメータ|必須|概要
+Parameter|Required?|Description
 ---|---|---
-client_id|※|アプリケーション登録時に発行されたClient IDを指定してください。
-client_secret|※|アプリケーション登録時に発行されたClient Secretを指定してください。
-token|○|無効化したいアクセストークンまたはリフレッシュトークンを指定してください。
+client_id|※|Please specify the Client ID provided at the time of application registration.
+client_secret|※|Please specify the Client Secret provided at the time of application registration.
+token|yes|Please specify the access token or refresh token you want to invalidate.
 
-※ client_id, client_secretをリクエストパラメータで送ることは非推奨です。リクエストヘッダでクライアント認証をできない環境である場合のみ使ってください。可能である場合はリクエストヘッダでの認証を推奨します。
+※ Sending `client_id` and `client_secret` as request parameters is deprecated.Please use it only when the environment does not allow client authentication in the request header. Authentication via request headers is recommended when possible.
 
-#### レスポンス
+#### Response
 
-※ 空のjsonが返ります
+※ returns empty json
 
-#### 参考
+#### References
 
 - [RFC7009 OAuth 2.0 Token Revocation](https://tools.ietf.org/html/rfc7009)
 
@@ -187,109 +187,109 @@ token|○|無効化したいアクセストークンまたはリフレッシュ�
 - URI: `/oauth/introspect`
 - HTTP Methods: `POST`
 
-#### リクエストヘッダ（アクセストークン新規取得時、更新時共通）
+#### Request headers（When Get New Access Token or Renew Access Token）
 
-このエンドポイントはBASIC認証を用いたクライアント認証を行う必要があります。
-Client IDとClient Secretをコロン（":"）で連結し、Base64エンコードした値をAuthorizationヘッダで送ってください。
+This endpoint should authenticate the client using BASIC authentication.
+Concatenate the Client ID and Client Secret with a colon (":") and send the Base64-encoded value in the Authorization header.
 
-#### リクエストパラメータ
+#### Parameters
 
-パラメータ|必須|概要
+Parameter|Required?|Description
 ---|---|---
-client_id|※|アプリケーション登録時に発行されたClient IDを指定してください。
-client_secret|※|アプリケーション登録時に発行されたClient Secretを指定してください。
-token|○|確認対象のアクセストークンを指定してください。
+client_id|※|Please specify the Client ID provided at the time of application registration.
+client_secret|※|Please specify the Client Secret provided at the time of application registration.
+token|yes|Please specify the access token to be checked.
 
-※ client_id, client_secretをリクエストパラメータで送ることは非推奨です。リクエストヘッダでクライアント認証をできない環境である場合のみ使ってください。可能である場合はリクエストヘッダでの認証を推奨します。
+※ Sending `client_id` and `client_secret` as request parameters is deprecated.Please use it only when the environment does not allow client authentication in the request header. Authentication via request headers is recommended when possible.
 
-#### レスポンス
+#### Response
 
-パラメータ|必須|概要|サンプル
+Parameter|Required?|Description|Sample
 ---|---|---|---
-active|○|指定されたアクセストークンの有効性です。|true
-scope||指定されたアクセストークンのscopeです。|"openid email profile address"
-client_id||指定されたアクセストークンのClient IDです。|"bcdeb0f1b654"
-token_type||指定されたアクセストークンの種別です。|"Bearer"
-exp||指定されたアクセストークンが失効する時間です。(UNIX time)|1539251579
-iat||指定されたアクセストークンが発行された時間です。（UNIX time)|1539244379
-sub||指定されたアクセストークのリソースオーナーのユーザ識別子です。|"12345"
+active|yes|Validity of the specified access token.|true
+scope||The scope of the specified access token.|"openid email profile address"
+client_id||Client ID for the specified access token.|"bcdeb0f1b654"
+token_type||The type of the specified access token.|"Bearer"
+exp||Time at which the specified access token expires.(UNIX time)|1539251579
+iat||The time when the specified access token was provided.（UNIX time)|1539244379
+sub||The user identifier of the resource owner for the specified access token.|"12345"
 
-#### 参考
+#### References
 
 - [RFC7662 OAuth 2.0 Token Introspection](https://tools.ietf.org/html/rfc7662)
 
-### JWKs Endpoint（JWKsエンドポイント）
+### JWKs Endpoint
 
 - URI: `/oauth/discovery/keys`
 - HTTP Methods: `GET`
 
-#### リクエストパラメータ
+#### Parameters
 
-なし
+N/A
 
-#### レスポンス
+#### Response
 
-パラメータ|概要
+Parameter|Description
 ---|---
-keys|JWKの値の配列。
-kid|ID TokenのHeaderに含まれているKey ID。
-e|exponent。Public Keyを復元するための暗号化指数。
-n|modulus。Public Keyを復元するための公開鍵の絶対値。
-use|公開鍵の利用用途。"sig"はsignatureを意味し、署名検証目的で提供していることを示します。
-alg|署名検証のアルゴリズム
+keys|An array of JWK values.
+kid|Key ID contained in the header of the ID Token.
+e|exponent. Encryption index to recover the Public Key.
+n|modulus. The absolute value of the public key to restore the public key.
+use|Purpose of using public key. "sig" stands for signature, indicating that it is provided for signature verification purposes.
+alg|Algorithm for signature verification
 
 
-### UserInfo Endpoint（属性取得エンドポイント）
+### UserInfo Endpoint
 
 - URI: `/oauth/userinfo`
 - HTTP Methods: `GET/POST`
 
-#### リクエストヘッダー
+#### Request headers
 
-フィールド|必須|概要
+field|Required?|Description
 ---|---|---
-Authorization|○|Access Tokenの文字列を指定してください。（Bearer Token形式）
+Authorization|yes|Please specify the Access Token string（format: Bearer Token）
 
-#### リクエストパラメータ
+#### Parameters
 
-フィールド|必須|概要
+Parameter|Required?|Description
 ---|---|---
-access_token|○|Access Tokenの文字列を指定してください
+access_token|yes|Please specify the Access Token string
 
-#### レスポンス
+#### Response
 
-パラメータ|概要|必要なscope|サンプル
+Parameters|Description|Required scope|Sample
 ---|---|---|---
-sub|ユーザ識別子|openid|"abcde"
-identification_code|（外部サービスに送信しても良い）ユーザ識別子\[12桁\]|openid|"123456789012"
-email|メールアドレス|email|"moneyforward@example.com"
-email_verified|メールアドレス確認済みステータス|email|true
-gender|性別|profile|"male"
-birthdate|生年（月日は含まない）|profile|"1986"
+sub|user identifier|openid|"abcde"
+identification_code|（Send to external service）user identifier\[12 digits\]|openid|"123456789012"
+email|email address|email|"moneyforward@example.com"
+email_verified|Email verified status|email|true
+gender|sex|profile|"male"
+birthdate|year of birth（Does not include month and day）|profile|"1986"
 address|-|-|-
-postal_code|郵便番号|address|"1080023"
-region|都道府県|address|"東京都"
+postal_code|post code|address|"1080023"
+region|prefectures|address|"東京都"
 
 
-#### 参考
+#### References
 
 - [OpenID Connect Core 1.0 - UserInfo Endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo)
 
 
-### End Session Endpoint（ログアウトエンドポイント）
+### End Session Endpoint
 
 - URI: `/end_session`
 - HTTP Methods: `GET`
 
-パラメータが有効であれば、ユーザがMFIDにログイン済みであってもログアウトされ、指定されたURL（post_logout_redirect_uri）にリダイレクトします。RPをログアウトした際に、OP側もログアウトさせたい場合に利用してください。
+If the parameters are valid, even if the user is already logged into MFID, it will be logged out and redirected to the specified URL (post_logout_redirect_uri). Use this if you want to log out the OP when you log out the RP.
 
-#### リクエストパラメータ
+#### Parameters
 
-フィールド|必須|概要
+Parameter|Required?|Description
 ---|---|---
-client_id|○|アプリケーション登録時に発行されたClient IDを指定してください。
-post_logout_redirect_uri|○|アプリケーション登録時に設定したフルURL（もしくはカスタムURIスキーム）を指定してください。
+client_id|yes|Please specify the Client ID provided at the time of application registration.
+post_logout_redirect_uri|yes|Specify the full URL (or custom URI scheme) that you set when registering your application.
 
-#### 参考
+#### References
 
 - [OpenID Connect Session Management 1.0 - RP-Initiated Logout](https://openid.net/specs/openid-connect-session-1_0.html#RPLogout)
