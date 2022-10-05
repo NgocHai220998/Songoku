@@ -2,14 +2,14 @@
 ## Authorization Code Flow
 
 - [OpenID Configuration Endpoint](#openid-configuration-endpoint)
-- [User Registration Endpoint](#user-registration-endpointユーザ登録エンドポイント)
-- [Authorization Endpoint](#authorization-endpoint認可エンドポイント)
-- [Token Endpoint](#token-endpointトークンエンドポイント)
-- [Token Revocation Endpoint](#token-revocation-endpointトークン無効化エンドポイント)
+- [User Registration Endpoint](#user-registration-endpoint)
+- [Authorization Endpoint](#authorization-endpoint)
+- [Token Endpoint](#token-endpoint)
+- [Token Revocation Endpoint](#token-revocation-endpoint)
 - [Token Introspection Endpoint](#token-introspection-endpoint)
 - [JWKs Endpoint](#jwks-endpointjwksエンドポイント)
-- [UserInfo Endpoint](#userinfo-endpoint属性取得エンドポイント)
-- [End Session Endpoint](#end-session-endpointログアウトエンドポイント)
+- [UserInfo Endpoint](#userinfo-endpoint)
+- [End Session Endpoint](#end-session-endpoint)
 
 ### OpenID Configuration Endpoint
 
